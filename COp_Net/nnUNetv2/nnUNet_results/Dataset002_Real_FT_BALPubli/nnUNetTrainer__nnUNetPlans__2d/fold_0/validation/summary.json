@@ -1,0 +1,42 @@
+{
+    "foreground_mean": {
+        "Dice": 0.8966260940876183,
+        "FN": 136457.0,
+        "FP": 94474.0,
+        "IoU": 0.8126221666862755,
+        "TN": 6631885.0,
+        "TP": 1001504.0,
+        "n_pred": 1095978.0,
+        "n_ref": 1137961.0
+    },
+    "mean": {
+        "1": {
+            "Dice": 0.8966260940876183,
+            "FN": 136457.0,
+            "FP": 94474.0,
+            "IoU": 0.8126221666862755,
+            "TN": 6631885.0,
+            "TP": 1001504.0,
+            "n_pred": 1095978.0,
+            "n_ref": 1137961.0
+        }
+    },
+    "metric_per_case": [
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8966260940876183,
+                    "FN": 136457,
+                    "FP": 94474,
+                    "IoU": 0.8126221666862755,
+                    "TN": 6631885,
+                    "TP": 1001504,
+                    "n_pred": 1095978,
+                    "n_ref": 1137961
+                }
+            },
+            "prediction_file": "/localdisk/frobert002/nnUNetv2/GapsFillingEDP/nnUNet_results/Dataset002_Real_FT_BALPubli/nnUNetTrainer__nnUNetPlans__2d/fold_0/validation/BAL_PIN1_real_val.nii.gz",
+            "reference_file": "/localdisk/frobert002/nnUNetv2/GapsFillingEDP/nnUNet_preprocessed/Dataset002_Real_FT_BALPubli/gt_segmentations/BAL_PIN1_real_val.nii.gz"
+        }
+    ]
+}
