@@ -5,7 +5,7 @@ import shutil
 import subprocess
 import glob
 
-# COp-Net inference 
+# COp-Net iterative inference  
 def Inference(path_to_input_probamap , path_to_output_folder, cv_threshold = 0.1, max_iter = 50) : 
 
     """path_to_input_probamap : path to the input probamap, the file must be in .nii.gz format
