@@ -4,6 +4,7 @@ import os
 import shutil
 import subprocess
 import glob
+import time
 
 # COp-Net iterative inference  
 def Inference(path_to_input_probamap , path_to_output_folder, cv_threshold = 0.1, max_iter = 50) : 
@@ -37,6 +38,7 @@ def Inference(path_to_input_probamap , path_to_output_folder, cv_threshold = 0.1
         if len(glob.glob(os.path.join(input_path,'CopNet_'+str(i+1),'*.nii.gz'))) == 0 or \
         len(glob.glob(os.path.join(output_path,'CopNet_'+str(i),'*.npz'))) != len(glob.glob(os.path.join(input_path,'CopNet_'+str(i),'*.nii.gz'))):
             
+            start_time = time.time()
             # define environment variables for nnUNetv2
             os.environ["nnUNet_raw"] = os.path.join("COp_Net/nnUNetv2/nnUNet_raw")
             os.environ["nnUNet_preprocessed"] = os.path.join("COp_Net/nnUnetv2/nnUNet_preprocessed")
@@ -51,6 +53,7 @@ def Inference(path_to_input_probamap , path_to_output_folder, cv_threshold = 0.1
             output = output['probabilities']
             output = output[1,:,:,:]
             sitk.WriteImage(sitk.GetImageFromArray(output), os.path.join(CopNet_nextiter_folder, 'CopNet_'+str(i+1)+'_0000.nii.gz'))
+            print("--- Iteration time = %s seconds ---" % (time.time() - start_time))
 
         else :
             print('The iteration was already computed')
