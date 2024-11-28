@@ -108,6 +108,11 @@ class Results:
             init_image = sitk.GetImageFromArray(np.uint16(self.init_image[idx,:,:]).reshape(1, self.y_size, self.x_size))
             final_image = sitk.GetImageFromArray(np.uint16(self.final_image[idx,:,:]).reshape(1, self.y_size, self.x_size))
 
+            if slice_visualization == idx : 
+                # Saving results 
+                sitk.WriteImage(sitk.GetImageFromArray(sitk.GetArrayFromImage(pred_image)[0,:,:]), 'Outputs/COpNet_contour.nii.gz')
+                sitk.WriteImage(sitk.GetImageFromArray(sitk.GetArrayFromImage(init_image)[0,:,:]), 'Outputs/nnUNet_contour.nii.gz')  
+
             # Get cell masks
             pred_image = sitk.ChangeLabel(pred_image, {1:0, 0:1})
             init_image = sitk.ChangeLabel(init_image, {1:0, 0:1})
@@ -117,7 +122,7 @@ class Results:
             if slice_visualization == idx :
                 self.pred_contour = sitk.BinaryContour(pred_image)
                 self.init_contour = sitk.BinaryContour(init_image)
-                self.final_contour = sitk.BinaryContour(final_image)    
+                self.final_contour = sitk.BinaryContour(final_image)  
 
             
             # Apply the connected component algorithm
