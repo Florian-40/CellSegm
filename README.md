@@ -2,11 +2,11 @@
 
 ## Description
 
-**COp-Net**, for Cell Contour Closing Operator, is a novel deep learning-based approach developed for cell instance segmentation in biological microscopy imaging. This method aims to automatically detect and fill gaps in an initial cell contour segmentation with missing information, reducing the need for manual correction for biological experts. The primary focus of the research is to apply convolutional neural network (CNN) architectures for instance segmentation in 3D electron microscopy images.
+**COp-Net**, for Cell Contour Closing Operator, is a novel deep learning-based approach developed for cell instance segmentation in biological microscopy imaging. This method aims to automatically detect and fill gaps in an initial cell contour segmentation with missing information, reducing the need for manual correction for biological experts. 
 
 
 This repository contains the code and resources related to the COp-Net model, including: 
-1. the source code to solve a diffusion partial differntial equation (PDE) to generate cell contour probability maps with missing informations from ground truth cell contour segmentation
+1. the source code to solve a diffusion partial differential equation (PDE) to generate cell contour probability maps with missing informations from ground truth cell contour segmentation
 2. the closing network weights
 3. a python script to perform the iterative inference of our trained COp-Net
 4. images to visualise the results from the experiments conducted.
@@ -25,7 +25,8 @@ To run COp-Net, you'll need Python XXX and several dependencies. You can install
 1. Install the nnU-Netv2. (see instructions [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md))
 
 2. Clone the repository:
-```git clone https://github.com/Florian-40/CellSegm.git
+```
+git clone https://github.com/Florian-40/CellSegm.git
 cd CellSegm 
 ```
 3. Install the dependencies: 
