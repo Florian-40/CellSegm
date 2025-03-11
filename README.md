@@ -33,6 +33,11 @@ cd CellSegm
 ```
 pip install -r requirements.txt
 ```
+4. Unzip model weights:
+```
+ unzip -q ./COp_Net/nnUNetv2.zip -d ./COp_Net/ && rm -rf ./COp_Net/__MACOSX
+```
+
 
 ## Usage 
 Two Jupyter notebooks are proposed. 

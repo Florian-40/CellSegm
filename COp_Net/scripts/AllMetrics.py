@@ -49,7 +49,7 @@ class Results:
             init_image = image
             final_image = labels
 
-        # Symmetry on border if necessary (teh original grayscale image contains black borders due to the alignement process)
+        # Symmetry on border if necessary (the original grayscale image contains black borders due to the alignement process)
         if background_orig is not None :
             background = sitk.ReadImage(background_orig)
             background = sitk.GetArrayFromImage(background)
@@ -256,6 +256,12 @@ class Results:
             print('Centerline Dice (clDice): \n')
             print('nnUNet + COp-Net: ', np.mean(CLDice_pred))
             print('nnUNet only: ', np.mean(CLDice_init), '\n')
+            
+        if len(self.init_image)>1 :
+            self.segmentation_metrics = NSD_pred.mean(), NSD_init.mean(), np.mean(CLDice_pred), np.mean(CLDice_init), NSD_pred.std(),  NSD_init.std(), np.std(CLDice_pred), np.std(CLDice_init)
+        else : 
+            self.segmentation_metrics = NSD_pred.item(), NSD_init.item(), np.mean(CLDice_pred), np.mean(CLDice_init)
+            
 
 
     def Visualization(self, idx : int = 0): 
