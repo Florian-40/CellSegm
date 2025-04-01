@@ -16,7 +16,7 @@ This repository contains the code and resources related to the COp-Net model, in
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Model](#model)
+- [Reference](#Reference and citation)
 
 ## Installation
 
@@ -24,7 +24,7 @@ To run COp-Net, you'll need Python 3.9 and several dependencies. You can install
 
 1. Create conda environment:
 ```
-conda create -y -n cellsegm python=3.9.19 pip
+conda create -y -n cellsegm python pip
 conda activate cellsegm
 ```
 
@@ -79,13 +79,12 @@ For detailed information about the model architecture and training process, refe
 
 
 ## Reference and citation
-
-If you use COp-Net in your work, please cite the following publication:
+For detailed information about the model architecture and training process, refer to the following publication :
 
 F. Robert, A. Calovoulos, L. Facq, F. Decoeur, E. Gontier, C. F. Grosset, and B. Denis de Senneville, "Enhancing Cell Instance Segmentation in Scanning Electron Microscopy Images via a Deep Contour Closing Operator," arXiv preprint, 2024. Available at: [https://arxiv.org/abs/2407.15817](https://arxiv.org/abs/2407.15817)
 
 
-
+If you use COp-Net in your work, please cite the following publication:
 
 ```bibtex
 @article{robert2024,
