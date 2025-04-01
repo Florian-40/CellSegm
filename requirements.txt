@@ -1,2 +1,3 @@
 opencv-python
 monai
+matplotlib-inline
