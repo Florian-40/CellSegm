@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ```
 4. Unzip model weights:
 ```
- unzip -q ./COp_Net/nnUNetv2.zip -d ./COp_Net/ && rm -rf ./COp_Net/__MACOSX
+unzip -q ./COp_Net/nnUNetv2.zip -d ./COp_Net/ && rm -rf ./COp_Net/__MACOSX
 ```
 
 
@@ -71,10 +71,26 @@ For detailed information about the model architecture and training process, refe
 
 
 
-## Citation
+## Reference and citation
 
-If you use COp-Net in your work, please cite the following paper:
+If you use COp-Net in your work, please cite the following publication:
 
+F. Robert, A. Calovoulos, L. Facq, F. Decoeur, E. Gontier, C. F. Grosset, and B. Denis de Senneville, "Enhancing Cell Instance Segmentation in Scanning Electron Microscopy Images via a Deep Contour Closing Operator," arXiv preprint, 2024. Available at: [https://arxiv.org/abs/2407.15817](https://arxiv.org/abs/2407.15817)
+
+
+
+
+```bibtex
+@article{robert2024,
+      title={Enhancing Cell Instance Segmentation in Scanning Electron Microscopy Images via a Deep Contour Closing Operator}, 
+      author={Florian Robert and Alexia Calovoulos and Laurent Facq and Fanny Decoeur and Etienne Gontier and Christophe F. Grosset and Baudouin Denis de Senneville},
+      year={2024},
+      eprint={2407.15817},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2407.15817}, 
+}
+```
 
 
 
