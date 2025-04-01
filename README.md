@@ -32,7 +32,7 @@ conda activate cellsegm
 
 3. Install the nnU-Netv2. (see instructions [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md) for more details). 
 ```
-git clone --branch v2.3.1 https://github.com/MIC-DKFZ/nnUNet.git
+git clone https://github.com/MIC-DKFZ/nnUNet.git
 cd nnUNet
 pip install -e .
 ```
@@ -42,10 +42,17 @@ pip install -e .
 git clone https://github.com/Florian-40/CellSegm.git
 cd CellSegm 
 ```
-3. Install the dependencies: 
+
+5. Install the dependencies: 
 ```
 pip install -r requirements.txt
 ```
+
+6. Download Cop-Net weights: 
+```
+curl -o COp_Net/nnUNetv2.zip https://www.math.u-bordeaux.fr/~frobert002/documents/Cop_Net_weights/nnUNetv2.zip
+```
+
 4. Unzip model weights:
 ```
 unzip -q ./COp_Net/nnUNetv2.zip -d ./COp_Net/ && rm -rf ./COp_Net/__MACOSX
