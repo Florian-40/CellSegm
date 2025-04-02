@@ -71,9 +71,12 @@ Two Jupyter notebooks are proposed.
 ## Model
 
 **COp-Net** leverages a state-of-the-art convolutional neural network architecture (nnU-Net) for instance segmentation in an iterative inference scheme. 
-
+Overview of the proposed pipeline for cell instance segmentation : 
 ![Overview of the proposed pipeline for cell instance segmentation.](Documentation/FIG1.png)
-![Schematic view of the proposed cell contour Closing Operator (COp-Net)](Documentation/FIG1.png)
+
+
+Schematic view of the proposed cell contour Closing Operator (COp-Net): 
+![Schematic view of the proposed cell contour Closing Operator (COp-Net)](Documentation/FIG2.png)
 
 ## Reference and citation
 For detailed information about the model architecture and training process, refer to the following publication :
