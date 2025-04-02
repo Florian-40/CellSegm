@@ -26,6 +26,7 @@ To run COp-Net, you'll need Python 3.9 and several dependencies. You can install
 ```
 conda create -y -n cellsegm python pip
 conda activate cellsegm
+conda install -c conda-forge compilers
 ```
 
 2. Install [PyTorch](https://pytorch.org/get-started/locally/) as described on their website (conda/pip).
@@ -71,14 +72,8 @@ Two Jupyter notebooks are proposed.
 
 **COp-Net** leverages a state-of-the-art convolutional neural network architecture (nnU-Net) for instance segmentation in an iterative inference scheme. 
 
-For detailed information about the model architecture and training process, refer to the paper associated with this project:
-
-**Paper Title**: Enhancing Cell Instance Segmentation in Scanning Electron Microscopy Images via a Deep Contour Closing Operator 
-**Authors**: Florian Robert, Alexia Calovoulos, Laurent Facq, Fanny Decoeur, Etienne Gontier, Christophe F. Grosset, Baudouin Denis de Senneville
-**Journal**: Computers in Biology and Medicine  
-**Year**: 2025
-
-
+![Overview of the proposed pipeline for cell instance segmentation.](Documentation/FIG1.png)
+![Schematic view of the proposed cell contour Closing Operator (COp-Net)](Documentation/FIG1.png)
 
 ## Reference and citation
 For detailed information about the model architecture and training process, refer to the following publication :
