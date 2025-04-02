@@ -63,6 +63,8 @@ unzip -q ./COp_Net/nnUNetv2.zip -d ./COp_Net/ && rm -rf ./COp_Net/__MACOSX
 Two Jupyter notebooks are proposed. 
 - PDESolving.ipynb: generate cell contour probability maps from a private ground truth cell contour segmentation., by solving a dedicated PDE (Eq. 1 in the paper). Two time scheme are proposed: Crank-Nicolson and Forward Euler. You can apply this on your own ground truth segmentation and modify the hyper-parameters. 
 
+- Test.ipynb: test iterative Cop-Net inference on a 2D slice of our testing dataset or apply it on your own 2D or 3D dataset.
+
 
 
 ## Model
@@ -81,20 +83,22 @@ For detailed information about the model architecture and training process, refe
 ## Reference and citation
 For detailed information about the model architecture and training process, refer to the following publication :
 
-F. Robert, A. Calovoulos, L. Facq, F. Decoeur, E. Gontier, C. F. Grosset, and B. Denis de Senneville, "Enhancing Cell Instance Segmentation in Scanning Electron Microscopy Images via a Deep Contour Closing Operator," arXiv preprint, 2024. Available at: [https://arxiv.org/abs/2407.15817](https://arxiv.org/abs/2407.15817)
+Florian Robert, Alexia Calovoulos, Laurent Facq, Fanny Decoeur, Etienne Gontier, Christophe F. Grosset, Baudouin Denis de Senneville, “Enhancing cell instance segmentation in scanning electron microscopy images via a deep contour closing operator,” Computers in Biology and Medicine, vol. 190, p. 109972, 2025, ISSN 0010-4825, [https://doi.org/10.1016/j.compbiomed.2025.109972](https://www.sciencedirect.com/science/article/pii/S0010482525003233)
 
 
 If you use COp-Net in your work, please cite the following publication:
 
 ```bibtex
-@article{robert2024,
-      title={Enhancing Cell Instance Segmentation in Scanning Electron Microscopy Images via a Deep Contour Closing Operator}, 
-      author={Florian Robert and Alexia Calovoulos and Laurent Facq and Fanny Decoeur and Etienne Gontier and Christophe F. Grosset and Baudouin Denis de Senneville},
-      year={2024},
-      eprint={2407.15817},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV},
-      url={https://arxiv.org/abs/2407.15817}, 
+@article{robert2025,
+title = {Enhancing cell instance segmentation in scanning electron microscopy images via a deep contour closing operator},
+journal = {Computers in Biology and Medicine},
+volume = {190},
+pages = {109972},
+year = {2025},
+issn = {0010-4825},
+doi = {https://doi.org/10.1016/j.compbiomed.2025.109972},
+url = {https://www.sciencedirect.com/science/article/pii/S0010482525003233},
+author = {Florian Robert and Alexia Calovoulos and Laurent Facq and Fanny Decoeur and Etienne Gontier and Christophe F. Grosset and Baudouin {Denis de Senneville}}
 }
 ```
 
