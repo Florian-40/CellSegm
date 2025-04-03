@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           conda install -y -c conda-forge compilers
-          conda install -y pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+          conda install -y pytorch torchvision torchaudio cpuonly -c pytorch
           git clone https://github.com/MIC-DKFZ/nnUNet.git
           cd nnUNet
           pip install -e .
@@ -37,5 +37,6 @@ jobs:
 
       - name: Execute Jupyter Notebooks
         run: |
+          export CUDA_VISIBLE_DEVICES=""
           jupyter nbconvert --to notebook --execute Test.ipynb
           jupyter nbconvert --to notebook --execute PDESolving.ipynb
