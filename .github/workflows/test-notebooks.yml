@@ -1,0 +1,41 @@
+name: Test Jupyter Notebooks
+
+on: [push, pull_request]
+
+jobs:
+  test-notebooks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: cellsegm
+          environment-name: cellsegm
+          auto-activate-base: false
+
+
+      - name: Install dependencies
+        run: |
+          conda install -y -c conda-forge compilers
+          conda install -y pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+          git clone https://github.com/MIC-DKFZ/nnUNet.git
+          cd nnUNet
+          pip install -e .
+          cd ..
+          git clone https://github.com/Florian-40/CellSegm.git
+          cd CellSegm
+          pip install -r requirements.txt
+
+      - name: Download and extract Cop-Net weights
+        run: |
+          curl -o COp_Net/nnUNetv2.zip https://www.math.u-bordeaux.fr/~frobert002/documents/Cop_Net_weights/nnUNetv2.zip
+          unzip -q ./COp_Net/nnUNetv2.zip -d ./COp_Net/ && rm -rf ./COp_Net/__MACOSX
+
+      - name: Execute Jupyter Notebooks
+        run: |
+          jupyter nbconvert --to notebook --execute Test.ipynb
+          jupyter nbconvert --to notebook --execute PDESolving.ipynb
