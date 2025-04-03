@@ -20,7 +20,7 @@ This repository contains the code and resources related to the COp-Net model, in
 
 ## Installation
 
-To run COp-Net, you'll need Python 3.9 and several dependencies. You can install them by following these steps:
+To run COp-Net, you'll need Python and several dependencies. You can install them by following these steps:
 
 1. Create conda environment:
 ```
@@ -39,7 +39,8 @@ pip install -e .
 ```
 
 4. Clone the repository:
-```
+``` 
+cd ..
 git clone https://github.com/Florian-40/CellSegm.git
 cd CellSegm 
 ```
